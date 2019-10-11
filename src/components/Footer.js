@@ -3,12 +3,12 @@ import React from 'react';
 class Footer extends React.Component{
     render(){
     	return(
-    		<footer class="app-footer">
+    		<footer className="app-footer">
 		      <div>
 		        <a href="https://coreui.io">CoreUI</a>
 		        <span>&copy; 2018 creativeLabs.</span>
 		      </div>
-		      <div class="ml-auto">
+		      <div className="ml-auto">
 		        <span>Powered by</span>
 		        <a href="https://coreui.io">CoreUI</a>
 		      </div>
