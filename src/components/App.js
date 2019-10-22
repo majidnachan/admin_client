@@ -1,19 +1,42 @@
 import React from 'react';
 import '../css/App.css';
-//app flex-row align-items-center
 import Container from './Container';
 import Login from './Login';
 
 
-function App () {
-  
-  const isLoggedIn = 1;
-  if (isLoggedIn) {
-    return <Container />;
-  }else{
-    return <Login />;  
-  }
-  
+class App extends React.Component {
+
+	constructor(props) {
+    	super(props);
+
+    	this.state = {
+      		isValidUser : 0
+    	};
+  	}
+
+    updateApp = () => {
+      this.setState();
+    }
+
+  	componentDidMount() {
+  		const token = localStorage.getItem('_s');
+  		//const token = '1';
+  		if (token) {
+        this.setState({ isValidUser :  1});
+    	}
+    }
+  	
+	render() {
+    if(this.state.isValidUser){
+  		return (
+  			<Container updateApp= {this.updateApp} />
+			);
+  	}else{
+  		return (
+  			<Login />
+	    );
+  	}
+	}
 }
 
 export default App;

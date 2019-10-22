@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 class Container extends React.Component{
     render(){
-    	return(<div className="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show"><Header /><Main /><Footer /></div>);
+    	return(<div className="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show"><Header /><Main updateApp={this.props.updateApp} /><Footer /></div>);
     }
 }
 
